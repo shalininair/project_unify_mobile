@@ -7,6 +7,7 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var typescript = require('gulp-tsc');
+var tsd = require('gulp-tsd');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
@@ -41,7 +42,14 @@ gulp.task('watch', function() {
   gulp.watch(paths.src, ['compile']);
 });
 
-gulp.task('install', ['git-check'], function() {
+gulp.task('tsd', function (done) {
+    tsd({
+        command: 'reinstall',
+        config: './tsd.json'
+    }, done);
+});
+
+gulp.task('install', ['git-check', 'tsd'], function() {
   return bower.commands.install()
     .on('log', function(data) {
       gutil.log('bower', gutil.colors.cyan(data.id), data.message);
