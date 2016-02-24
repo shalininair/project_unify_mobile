@@ -9732,7 +9732,12 @@ a.button {
   transition-duration: 0s; }
 
 .bar.bar-positive {
-  background-color: #6b46e5; }
+  background-color: #72fdaa; }
 
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
-  color: #e6b500; }
+  color: #fd7b6e; }
+
+.background-logo {
+  background: url("../img/logo.jpg") no-repeat center;
+  background-size: contain;
+  margin: auto; }

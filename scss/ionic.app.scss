@@ -22,9 +22,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 .bar.bar-positive {
-  background-color: #6b46e5;
+  background-color: rgb(114,253,170);
 }
 
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
-  color: #e6b500;
+  color: rgb(253,123, 110);
+}
+
+.background-logo {
+  background: url('../img/logo.jpg') no-repeat center;
+  background-size: contain;
+  margin:auto
 }
