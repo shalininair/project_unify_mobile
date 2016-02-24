@@ -1,3 +1,5 @@
+/// <reference path="../typings/tsd.d.ts" />
+
 angular.module('unify.services', [])
 
 .factory('Chats', function() {
