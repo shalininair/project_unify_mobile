@@ -18,10 +18,10 @@ angular.module('unify', ['ionic', 'unify.controllers', 'unify.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) {
 
   $stateProvider
-      
+
     .state('tab', {
     url: '/tab',
     abstract: true,
@@ -33,7 +33,7 @@ angular.module('unify', ['ionic', 'unify.controllers', 'unify.services'])
     views: {
       'tab-match': {
         templateUrl: 'templates/tab-match.html',
-        controller: 'MatchCtrl'
+        controller: 'MatchCtrl as ctrl'
       }
     }
   })
@@ -43,7 +43,7 @@ angular.module('unify', ['ionic', 'unify.controllers', 'unify.services'])
       views: {
         'tab-chats': {
           templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+          controller: 'ChatsCtrl as ctrl'
         }
       }
     })
@@ -52,7 +52,7 @@ angular.module('unify', ['ionic', 'unify.controllers', 'unify.services'])
       views: {
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'ChatDetailCtrl as ctrl'
         }
       }
     })
@@ -62,7 +62,7 @@ angular.module('unify', ['ionic', 'unify.controllers', 'unify.services'])
     views: {
       'tab-profile': {
         templateUrl: 'templates/tab-profile.html',
-        controller: 'ProfileCtrl'
+        controller: 'ProfileCtrl as ctrl'
       }
     }
   });
